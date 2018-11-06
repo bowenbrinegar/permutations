@@ -1,19 +1,13 @@
 import java.util.List;
 
 public class palindrome {
-    private String[] perms;
-
     public static void main(String ...args) {
-        String test_case = "aabc";
+        String test_case = "cats";
         String[] letters = test_case.split("");
-
-        int amount = factorial(0, 5);
-        System.out.println(amount);
-
         permutations(letters, letters.length);
     }
 
-    private void permutations(String[] letters, int pos) {
+    public static void permutations(String[] letters, int pos) {
         String[] current = letters;
         int n_position = pos;
 
@@ -37,7 +31,7 @@ public class palindrome {
         }
     }
 
-    private void swap(String[] cur, int right, int left) {
+    private static void swap(String[] cur, int right, int left) {
         String temp = cur[right];
         cur[right] = cur[left];
         cur[left] = temp;
